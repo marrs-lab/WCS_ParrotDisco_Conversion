@@ -1,0 +1,205 @@
+exe      : /data/ftp/internal_000/ardupilot/arduplane
+build-id : 
+cmdline  : /data/ftp/internal_000/ardupilot/arduplane
+process  : arduplane        (pid 1152)
+thread   : arduplane        (tid 1152)
+signal   : 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 00000010
+
+registers:
+ r0 00000023  r1 00b9e330  r2 00000088  r3 00000000
+ r4 0000000b  r5 b6faa110  r6 00b9e330  r7 00000003
+ r8 00b9e3d0  r9 00000244  10 00000091  fp 000049b4
+ ip 00000000  sp 00b9e2b0  lr 00000000  pc b6e1b36e  cpsr 80070030
+
+backtrace:
+         #00  pc  0000b36e  /lib/libpthread-2.19-2014.08-1-git.so                                                 (read+2)
+         #01  pc  00000d78  /usr/lib/libcrashdump.so                                                              (_init+556)
+         #02  pc  000259be  /lib/libc-2.19-2014.08-1-git.so                                                       (__default_rt_sa_restorer_v1+8)
+         #03  pc  0007025a  /data/ftp/internal_000/ardupilot/arduplane                                            (RC_Channel::set_range(unsigned short)+380682)
+
+code/data around pc: 0xb6e1b36e
+0xb6e1b34c: b4800f00 4f13d107 bc80df00 5f80f510 
+0xb6e1b35c: 4770bf38 b50fe013 fd54f7ff bc0f4684 
+0xb6e1b36c: df004f0c 46604607 fd92f7ff f85d4638 
+0xb6e1b37c: bc80eb04 5f80f510 4770bf38 b500e7ff 
+0xb6e1b38c: f7f8b401 bc02ee50 0100f1c1 f06f6001 
+
+code/data around lr: 0x00000000
+0x00000000: ffffffff ffffffff ffffffff ffffffff 
+0x00000010: ffffffff ffffffff ffffffff ffffffff 
+0x00000020: ffffffff ffffffff ffffffff ffffffff 
+
+code/data around r0: 0x00000023
+0x00000000: ffffffff ffffffff ffffffff ffffffff 
+0x00000010: ffffffff ffffffff ffffffff ffffffff 
+0x00000020: ffffffff ffffffff ffffffff ffffffff 
+0x00000030: ffffffff ffffffff ffffffff ffffffff 
+0x00000040: ffffffff ffffffff ffffffff ffffffff 
+
+code/data around r1: 0x00b9e330
+0x00b9e310: 00000000 00000000 00000000 00000000 
+0x00b9e320: 00000000 00000000 00000000 00000000 
+0x00b9e330: 00000480 00000480 0000000b 00000000 
+0x00b9e340: 00000001 00000010 00000000 00000000 
+0x00b9e350: 00000000 00000000 00000000 00000000 
+
+code/data around r2: 0x00000088
+0x00000068: ffffffff ffffffff ffffffff ffffffff 
+0x00000078: ffffffff ffffffff ffffffff ffffffff 
+0x00000088: ffffffff ffffffff ffffffff ffffffff 
+0x00000098: ffffffff ffffffff ffffffff ffffffff 
+0x000000a8: ffffffff ffffffff ffffffff ffffffff 
+
+code/data around r3: 0x00000000
+0x00000000: ffffffff ffffffff ffffffff ffffffff 
+0x00000010: ffffffff ffffffff ffffffff ffffffff 
+0x00000020: ffffffff ffffffff ffffffff ffffffff 
+
+code/data around r4: 0x0000000b
+0x00000000: ffffffff ffffffff ffffffff ffffffff 
+0x00000010: ffffffff ffffffff ffffffff ffffffff 
+0x00000020: ffffffff ffffffff ffffffff ffffffff 
+
+code/data around r5: 0xb6faa110
+0xb6faa0f0: 00000000 00000000 00000000 00000000 
+0xb6faa100: 00000000 00000000 00000000 00000000 
+0xb6faa110: 00011010 b6fd1660 b6fba540 b6f997f0 
+0xb6faa120: b6e1b341 b6f997f0 b6d7f740 b6f997f0 
+0xb6faa130: b6f997f0 b6e1c5ad b6d77221 b6f997f0 
+
+code/data around r6: 0x00b9e330
+0x00b9e310: 00000000 00000000 00000000 00000000 
+0x00b9e320: 00000000 00000000 00000000 00000000 
+0x00b9e330: 00000480 00000480 0000000b 00000000 
+0x00b9e340: 00000001 00000010 00000000 00000000 
+0x00b9e350: 00000000 00000000 00000000 00000000 
+
+code/data around r7: 0x00000003
+0x00000000: ffffffff ffffffff ffffffff ffffffff 
+0x00000010: ffffffff ffffffff ffffffff ffffffff 
+0x00000020: ffffffff ffffffff ffffffff ffffffff 
+
+code/data around r8: 0x00b9e3d0
+0x00b9e3b0: 00000000 00000000 00112410 00000001 
+0x00b9e3c0: 0000002c 0000001d 0000001d b6d479c1 
+0x00b9e3d0: 0000000b 00000000 00000001 00000010 
+0x00b9e3e0: 00000000 00000000 00000000 00000000 
+0x00b9e3f0: 00000000 00000000 00000000 00000000 
+
+code/data around r9: 0x00000244
+0x00000224: ffffffff ffffffff ffffffff ffffffff 
+0x00000234: ffffffff ffffffff ffffffff ffffffff 
+0x00000244: ffffffff ffffffff ffffffff ffffffff 
+0x00000254: ffffffff ffffffff ffffffff ffffffff 
+0x00000264: ffffffff ffffffff ffffffff ffffffff 
+
+code/data around r10: 0x00000091
+0x00000070: ffffffff ffffffff ffffffff ffffffff 
+0x00000080: ffffffff ffffffff ffffffff ffffffff 
+0x00000090: ffffffff ffffffff ffffffff ffffffff 
+0x000000a0: ffffffff ffffffff ffffffff ffffffff 
+0x000000b0: ffffffff ffffffff ffffffff ffffffff 
+
+code/data around fp: 0x000049b4
+0x00004994: ffffffff ffffffff ffffffff ffffffff 
+0x000049a4: ffffffff ffffffff ffffffff ffffffff 
+0x000049b4: ffffffff ffffffff ffffffff ffffffff 
+0x000049c4: ffffffff ffffffff ffffffff ffffffff 
+0x000049d4: ffffffff ffffffff ffffffff ffffffff 
+
+code/data around ip: 0x00000000
+0x00000000: ffffffff ffffffff ffffffff ffffffff 
+0x00000010: ffffffff ffffffff ffffffff ffffffff 
+0x00000020: ffffffff ffffffff ffffffff ffffffff 
+
+code/data around sp: 0x00b9e2b0
+0x00b9e290: 00b9e3d0 0000000b b6faa110 b6e1b369 
+0x00b9e2a0: 00000023 00b9e330 00000088 00000000 
+0x00b9e2b0: b6f99d7c 00000023 00000000 00000000 
+0x00b9e2c0: 63000001 68736172 706d7564 00000000 
+0x00b9e2d0: 00000000 00000000 00000000 00000000 
+
+process mapped memory regions:
+    address       perms  offset  dev  inode      pathname                                                   .alchemy.build-id
+00010000-00102000 r-xp 00000000b3:06 130818   /data/ftp/internal_000/ardupilot/arduplane       
+00111000-00112000 r--p 000f1000b3:06 130818   /data/ftp/internal_000/ardupilot/arduplane       
+00112000-00113000 rw-p 000f2000b3:06 130818   /data/ftp/internal_000/ardupilot/arduplane       
+00113000-0011c000 rw-p 0000000000:00    0                                                    
+00b9c000-00be3000 rw-p 0000000000:00    0   [heap]                                           
+b5d04000-b5d05000 ---p 0000000000:00    0                                                    
+b5d05000-b5d44000 rw-p 0000000000:00    0   [stack:1164]                                     
+b5d44000-b5d45000 ---p 0000000000:00    0                                                    
+b5d45000-b5d84000 rw-p 0000000000:00    0   [stack:1163]                                     
+b5d84000-b5d8e000 -w-s 0000000000:0c 6873   /dev/shm/shd_ardupilot_imu                       
+b5d8e000-b5d95000 r-xp 00000000b3:03 1643   /usr/lib/libshdata.so                            
+b5d95000-b5da4000 ---p 00007000b3:03 1643   /usr/lib/libshdata.so                            
+b5da4000-b5da5000 rw-p 00006000b3:03 1643   /usr/lib/libshdata.so                            
+b5da5000-b5daa000 r-xp 00000000b3:03  620   /lib/librt-2.19-2014.08-1-git.so                 
+b5daa000-b5db9000 ---p 00005000b3:03  620   /lib/librt-2.19-2014.08-1-git.so                 
+b5db9000-b5dba000 r--p 00004000b3:03  620   /lib/librt-2.19-2014.08-1-git.so                 
+b5dba000-b5dbb000 rw-p 00005000b3:03  620   /lib/librt-2.19-2014.08-1-git.so                 
+b5dbb000-b5dca000 r-xp 00000000b3:03 1082   /usr/lib/libtelemetry.so                         
+b5dca000-b5dd9000 ---p 0000f000b3:03 1082   /usr/lib/libtelemetry.so                         
+b5dd9000-b5dda000 rw-p 0000e000b3:03 1082   /usr/lib/libtelemetry.so                         
+b5dda000-b5ddd000 r-xp 00000000b3:03 1656   /usr/lib/libfutils.so                            
+b5ddd000-b5ded000 ---p 00003000b3:03 1656   /usr/lib/libfutils.so                            
+b5ded000-b5dee000 rw-p 00003000b3:03 1656   /usr/lib/libfutils.so                            
+b5dee000-b5df0000 r-xp 00000000b3:03 1487   /usr/lib/ardupilot/modules/libapm-telemetry.so   
+b5df0000-b5dff000 ---p 00002000b3:03 1487   /usr/lib/ardupilot/modules/libapm-telemetry.so   
+b5dff000-b5e00000 rw-p 00001000b3:03 1487   /usr/lib/ardupilot/modules/libapm-telemetry.so   
+b5e00000-b5e01000 ---p 0000000000:00    0                                                    
+b5e01000-b6600000 rw-p 0000000000:00    0   [stack:1162]                                     
+b6600000-b6601000 ---p 0000000000:00    0                                                    
+b6601000-b6700000 rw-p 0000000000:00    0   [stack:1161]                                     
+b6700000-b6721000 rw-p 0000000000:00    0                                                    
+b6721000-b6800000 ---p 0000000000:00    0                                                    
+b6800000-b6821000 rw-p 0000000000:00    0                                                    
+b6821000-b6900000 ---p 0000000000:00    0                                                    
+b6900000-b6901000 ---p 0000000000:00    0                                                    
+b6901000-b6a00000 rw-p 0000000000:00    0   [stack:1160]                                     
+b6a00000-b6a01000 ---p 0000000000:00    0                                                    
+b6a01000-b6b00000 rw-p 0000000000:00    0   [stack:1159]                                     
+b6b00000-b6b21000 rw-p 0000000000:00    0                                                    
+b6b21000-b6c00000 ---p 0000000000:00    0                                                    
+b6c09000-b6c0e000 -w-s 0000000000:0c 6872   /dev/shm/shd_ardupilot_ahrs                      
+b6c0e000-b6c0f000 ---p 0000000000:00    0                                                    
+b6c0f000-b6d0e000 rw-p 0000000000:00    0   [stack:1158]                                     
+b6d0e000-b6d12000 r-xp 00000000b3:03 1088   /usr/lib/libulog.so                              
+b6d12000-b6d21000 ---p 00004000b3:03 1088   /usr/lib/libulog.so                              
+b6d21000-b6d22000 rw-p 00003000b3:03 1088   /usr/lib/libulog.so                              
+b6d22000-b6dfb000 r-xp 00000000b3:03  361   /lib/libc-2.19-2014.08-1-git.so                  
+b6dfb000-b6e0a000 ---p 000d9000b3:03  361   /lib/libc-2.19-2014.08-1-git.so                  
+b6e0a000-b6e0c000 r--p 000d8000b3:03  361   /lib/libc-2.19-2014.08-1-git.so                  
+b6e0c000-b6e0d000 rw-p 000da000b3:03  361   /lib/libc-2.19-2014.08-1-git.so                  
+b6e0d000-b6e10000 rw-p 0000000000:00    0                                                    
+b6e10000-b6e20000 r-xp 00000000b3:03  363   /lib/libpthread-2.19-2014.08-1-git.so            
+b6e20000-b6e2f000 ---p 00010000b3:03  363   /lib/libpthread-2.19-2014.08-1-git.so            
+b6e2f000-b6e30000 r--p 0000f000b3:03  363   /lib/libpthread-2.19-2014.08-1-git.so            
+b6e30000-b6e31000 rw-p 00010000b3:03  363   /lib/libpthread-2.19-2014.08-1-git.so            
+b6e31000-b6e33000 rw-p 0000000000:00    0                                                    
+b6e33000-b6e4b000 r-xp 00000000b3:03  378   /lib/libgcc_s.so.1                               
+b6e4b000-b6e5b000 ---p 00018000b3:03  378   /lib/libgcc_s.so.1                               
+b6e5b000-b6e5c000 rw-p 00018000b3:03  378   /lib/libgcc_s.so.1                               
+b6e5c000-b6ebf000 r-xp 00000000b3:03  368   /lib/libm-2.19-2014.08-1-git.so                  
+b6ebf000-b6ece000 ---p 00063000b3:03  368   /lib/libm-2.19-2014.08-1-git.so                  
+b6ece000-b6ecf000 r--p 00062000b3:03  368   /lib/libm-2.19-2014.08-1-git.so                  
+b6ecf000-b6ed0000 rw-p 00063000b3:03  368   /lib/libm-2.19-2014.08-1-git.so                  
+b6ed0000-b6f6b000 r-xp 00000000b3:03 1662   /usr/lib/libstdc++.so.6.0.20                     
+b6f6b000-b6f7a000 ---p 0009b000b3:03 1662   /usr/lib/libstdc++.so.6.0.20                     
+b6f7a000-b6f7e000 r--p 0009a000b3:03 1662   /usr/lib/libstdc++.so.6.0.20                     
+b6f7e000-b6f80000 rw-p 0009e000b3:03 1662   /usr/lib/libstdc++.so.6.0.20                     
+b6f80000-b6f86000 rw-p 0000000000:00    0                                                    
+b6f86000-b6f88000 r-xp 00000000b3:03  408   /lib/libdl-2.19-2014.08-1-git.so                 
+b6f88000-b6f97000 ---p 00002000b3:03  408   /lib/libdl-2.19-2014.08-1-git.so                 
+b6f97000-b6f98000 r--p 00001000b3:03  408   /lib/libdl-2.19-2014.08-1-git.so                 
+b6f98000-b6f99000 rw-p 00002000b3:03  408   /lib/libdl-2.19-2014.08-1-git.so                 
+b6f99000-b6f9a000 r-xp 00000000b3:03 1460   /usr/lib/libcrashdump.so                         
+b6f9a000-b6faa000 ---p 00001000b3:03 1460   /usr/lib/libcrashdump.so                         
+b6faa000-b6fab000 rw-p 00001000b3:03 1460   /usr/lib/libcrashdump.so                         
+b6fab000-b6fc2000 r-xp 00000000b3:03  352   /lib/ld-2.19-2014.08-1-git.so                    
+b6fc7000-b6fcb000 rw-p 0000000000:00    0                                                    
+b6fd0000-b6fd2000 rw-p 0000000000:00    0                                                    
+b6fd2000-b6fd3000 r--p 00017000b3:03  352   /lib/ld-2.19-2014.08-1-git.so                    
+b6fd3000-b6fd4000 rw-p 00018000b3:03  352   /lib/ld-2.19-2014.08-1-git.so                    
+bea74000-bea95000 rw-p 0000000000:00    0                                                    
+ffff0000-ffff1000 r-xp 0000000000:00    0   [vectors]                                        
