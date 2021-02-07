@@ -1,1 +1,0 @@
-[REPORT v4.0][drones][evinrude][evinrude][1.4.1][evinrude][] process 'arduplane' crashed in thread 'arduplane'
